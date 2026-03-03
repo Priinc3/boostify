@@ -739,8 +739,6 @@ button {
 
 .badge-text {
     display: inline-block;
-    min-width: 200px;
-    text-align: left;
 }
 
 .hero-badge .dot {
