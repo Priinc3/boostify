@@ -7,6 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     /* ──────────────────────────────────────────
+       0. CUSTOM CURSOR — Blue dot that follows mouse
+       ────────────────────────────────────────── */
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
+    document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
+
+    // Scale up on hover over interactive elements
+    document.querySelectorAll('a, button, input, textarea, .tilt-card, .nav-cta, .btn-primary, .btn-secondary, .form-submit, .btn-outline, .social-link').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    });
+
+    /* ──────────────────────────────────────────
        1. NAVBAR — Scroll state + mobile menu
        ────────────────────────────────────────── */
     const navbar = document.getElementById('navbar');
@@ -352,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
 
     /* ──────────────────────────────────────────
-       14. TYPING EFFECT on hero badge
+       14. TYPING EFFECT on hero badge (fixed height)
        ────────────────────────────────────────── */
     const badgeText = document.querySelector('.badge-text');
     if (badgeText) {
@@ -364,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const phrase = phrases[phraseIdx];
             if (deleting) {
                 charIdx--;
-                badgeText.textContent = phrase.substring(0, charIdx);
+                badgeText.textContent = charIdx === 0 ? '\u00a0' : phrase.substring(0, charIdx);
                 if (charIdx === 0) {
                     deleting = false;
                     phraseIdx = (phraseIdx + 1) % phrases.length;
@@ -388,3 +409,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
