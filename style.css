@@ -102,18 +102,8 @@ body {
     }
 }
 
-a,
-button,
-input,
-textarea,
-.tilt-card,
-.nav-cta,
-.btn-primary,
-.btn-secondary,
-.form-submit,
-.btn-outline,
-.social-link {
-    cursor: none;
+* {
+    cursor: none !important;
 }
 
 a {
