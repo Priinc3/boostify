@@ -408,5 +408,15 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeLoop, 4000);
     }
 
+    /* ──────────────────────────────────────────
+       15. EMAIL DE-OBFUSCATION
+       ────────────────────────────────────────── */
+    document.querySelectorAll('.email-container').forEach(container => {
+        container.addEventListener('click', () => {
+            const email = container.textContent.trim();
+            window.location.href = `mailto:${email}`;
+        });
+    });
+
 });
 

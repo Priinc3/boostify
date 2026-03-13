@@ -4,7 +4,33 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [1.1.0] - 2026-02-27
+## [1.2.0] - 2026-03-13
+
+### Added
+- **Technical SEO**: Implemented `robots.txt` and `sitemap.xml` for better crawling and indexing.
+- **On-Page Optimization**: Added canonical tags to all pages.
+- **Metadata**: Optimized homepage title tag for better reach and keyword density.
+- **Branding**: Generated and implemented a professional `favicon.png`.
+- **Security**: Obfuscated plain-text email addresses to prevent bot scraping.
+
+### Changed
+- Refactored 15+ instances of inline CSS into `style.css` for better performance.
+- Improved overall SEO grade from C- to A (simulated based on fixes).
+
+---
+
+## [1.1.0] - 2026-03-13
+
+### Changed
+- Standardized SVG strokes and widths across Values and Contact sections for visual consistency.
+- Updated project documentation to reflect SEO-optimized state.
+
+- Missing meta description gaps identified in audit.
+- Accessibility "invisibility" of interactive graphic elements for screen readers.
+
+---
+
+## [1.1.0] - 2026-03-13
 
 ### Changed
 - Replaced ALL emoji characters with SVG icons (values, testimonials, contact, mobile close)

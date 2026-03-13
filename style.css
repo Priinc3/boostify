@@ -2104,3 +2104,27 @@ button {
         justify-content: center;
     }
 }
+
+/* ──────────────────────────────────────────
+   PHASE 2 SEO & UX REFINEMENTS
+   ────────────────────────────────────────── */
+.values-header {
+    margin-bottom: 40px;
+}
+
+.values-title {
+    font-size: 1.75rem;
+}
+
+.email-container {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.email-container:hover {
+    color: var(--accent-blue);
+}
+
+.email-container .at::before {
+    content: "@";
+}
