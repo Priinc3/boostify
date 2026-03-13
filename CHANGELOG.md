@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.3.0] - 2026-03-13
+
+### Added
+- **Analytics**: Integrated Google Analytics 4 (GA4) tracking code (`G-XEZX2RBW2L`) across all index pages.
+
+---
+
 ## [1.2.0] - 2026-03-13
 
 ### Added
